@@ -1,4 +1,4 @@
-# Spacejet**→[Live website]([https://gpmotta21.github.io/Spacejet/](https://spacejet.netlify.app/))**
+# Spacejet → [Live website](https://spacejet.netlify.app/)
 
 <br>
 
