@@ -1,0 +1,132 @@
+#about {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 600px;
+
+  .img-wrapper {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 1%;
+    overflow: hidden;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: blob 6s linear infinite;
+    width: 800px;
+    height: 600px;
+
+    img {
+      width: 100%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      animation: imgPosition 5s ease-in-out infinite;
+    }
+  }
+
+  // Text content
+  > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 600px;
+    color: $black;
+    margin-right: 120px;
+    text-align: start;
+
+    h1 {
+      font-size: 65px;
+      font-family: "Baumans", cursive;
+      line-height: 100px;
+      text-align: center;
+      margin-bottom: -30px;
+      border-right: 3px solid $black;
+      padding-right: 30px;
+    }
+
+    p {
+      font-size: 22px;
+      font-family: "Ubuntu", sans-serif;
+      padding: 10px;
+    }
+
+    a {
+      font-size: 30px;
+      font-family: "Alegreya Sans SC", sans-serif;
+      border-radius: 5px;
+      padding: 5px 30px;
+      color: white;
+      background: linear-gradient(264.92deg, #fd8b49 -11.22%, #de2473 51.24%, #4b3695 109.91%);
+    }
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30%/40% 40% 60% 50%;
+  }
+
+  34% {
+    border-radius: 70% 30% 50% 50%/30% 30% 70% 80%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 90%/ 100% 100% 70% 70%;
+  }
+}
+
+@keyframes imgPosition {
+  0%,
+  100% {
+    object-position: center;
+  }
+  50% {
+    object-position: 0 15px;
+  }
+}
+
+@media (max-width: 1600px) {
+  #about {
+    justify-content: center;
+    align-items: flex-start;
+
+    > div:last-of-type {
+      margin-right: 0;
+    }
+
+    .img-wrapper {
+      transform: translate(-50%, -50%);
+      top: 90%;
+      left: 50%;
+      width: 500px;
+      height: 300px;
+    }
+  }
+}
+@media (max-width: 680px) {
+  #about {
+    height: 500px;
+    > div:last-of-type {
+      gap: 20px;
+      h1 {
+        font-size: 40px;
+        line-height: initial;
+        margin-bottom: 1px;
+      }
+
+      p,
+      a {
+        font-size: 18px;
+      }
+    }
+
+    .img-wrapper {
+      top: 80%;
+      width: 400px;
+      height: 250px;
+    }
+  }
+}

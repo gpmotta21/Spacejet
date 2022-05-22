@@ -1,0 +1,54 @@
+@import "./variables";
+@import "./homepage";
+@import "./navbar";
+@import "./about";
+@import "./preview";
+@import "./footer";
+@import "./requests";
+@import "./animations";
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+button,
+i,
+a {
+  cursor: pointer;
+}
+
+button,
+a {
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+a {
+  font-style: none;
+  color: initial;
+}
+
+body {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $white;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  gap: 120px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='style/css/style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Baumans&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/241208416e.js" crossorigin="anonymous"></script>    <title>Spacejet</title>
+</head>
+<body>
+    <nav>
+        <img src='./Assets/Img/navbar-logo.png' />
+        <div>
+            <a href="#about">About us</a>
+            <a href="#preview">Discover</a>
+            <a target="_blank" href="https://gabrielp.netlify.app/">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <section id="homepage">
+            <div class="presentation">
+                <h1>You dont need  to explore space all by yourself</h1>
+                <p>Let us help you on your journey to the space exploration</p>
+                <span>
+                    <a href="about">About us</a>
+                    <a href="preview">Discover</a>
+                </span>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="img-wrapper">
+                <img src="./Assets/Img/homepage-img.png"/>  
+            </div>
+            <div data-aos="slide-left">
+                <h1>How does it work</h1>
+                <p>Spacejet provides data gathered from the NASA API, such as, access to the NASA Image and Video Library, Mars Rover Photos and the Astronomy Picture of the Day</p>
+                <a href="https://api.nasa.gov/" target="_blank">NASA API Documentation</a>
+            </div>
+        </section>
+        <section id="preview">
+            <div data-aos="slide-up">
+                <h1>Start discovering</h1>
+                <h2>What your looking for ?</h2>
+            </div>
+                <div class="img-anchors">
+                    <a data-aos="slide-right" href="#nasa">
+                        <img src="./Assets/Img/planets.png"/>
+                            <p>Nasa Image Library
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </p>
+                    </a>
+                    <a data-aos="slide-up" href="#rover">
+                        <img src="./Assets/Img/picture.png"/>
+                        <p>Astronomy picture of the day
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </p>
+                    </a>
+                    <a data-aos="slide-left" href="#APOD">
+                        <img src="./Assets/Img/roover.png"/>
+                        <p>Mars roover photos
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </p>
+                    </a>
+                </div>
+        </section>
+        <section id="nasa">
+            <header data-aos="slide-right">
+                <img src="./Assets/Img/planets.png"/>
+                <h1>NASA Image Library</h1>
+                <label>
+                    <input type="text" id="search-input" value="Saturn" />
+                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </label>
+            </header>
+            <div class="data library-data" data-aos="slide-left">
+            </div>
+        </section>
+        <section id="APOD">
+            <div class="APOD-data" data-aos="slide-right">
+            </div>
+            <header data-aos="slide-left">
+                <img src="./Assets/Img/picture.png"/>
+                <h1>Astronomy Picture of the Day</h1>
+            </header>
+        </section>
+        <section id="rover">
+            <header data-aos="slide-right">
+                <img src='./Assets/Img/roover.png' />
+                <h1>Mars Rover Photos</h1>
+                <span>
+                    <input type="radio" name="rover" id="spirit" value="https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=2009-6-3&api_key=WWHjtUgs2XHtmL8ypA8Ocnw41OiF5J7Xxh9Y7C9c">
+                    <label for="spirit">
+                        Spirit
+                    </label>
+                    <input type="radio" name="rover" id="curiosity" value="https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2021-6-3&api_key=WWHjtUgs2XHtmL8ypA8Ocnw41OiF5J7Xxh9Y7C9c"checked>
+                    <label for="curiosity">
+                        Curiosity
+                    </label>
+                    <input type="radio" name="rover" id="opportunity" value="https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=2018-6-3&api_key=WWHjtUgs2XHtmL8ypA8Ocnw41OiF5J7Xxh9Y7C9c">
+                    <label for="opportunity">
+                        Opportunity
+                    </label>
+                </span>
+            </header>
+            <div class="data rover-data" data-aos="slide-left">
+            </div>
+        </section>
+    </main>
+    <script type="module" src="scripts/Js/index.js"></script>
+</body>
+</html>

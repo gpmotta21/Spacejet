@@ -1,0 +1,155 @@
+#homepage {
+  display: flex;
+  align-items: center;
+  height: 784px;
+  width: 100%;
+  position: relative;
+  color: $black;
+  margin-top: -150px;
+  background-image: url("../../Assets/Img/homepage-bg.svg");
+
+  // Animated homepage BG and its mask
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1120px;
+    height: 821px;
+    background-image: url("../../Assets/Img/homepage.png");
+    background-repeat: no-repeat;
+    background-position: right -20px;
+    mask-image: url("../../Assets/Img/mask.png");
+    animation: bgPosition 5s ease-in-out infinite;
+  }
+
+  @keyframes bgPosition {
+    0%,
+    100% {
+      background-position: right -20px;
+    }
+    50% {
+      background-position: right 0px;
+    }
+  }
+
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    gap: 100px;
+    z-index: 1;
+    margin-left: 75px;
+    text-align: start;
+
+    h1 {
+      font-size: 55px;
+      font-family: "Baumans", cursive;
+      border-left: 3px solid $black;
+      padding-left: 30px;
+    }
+
+    p {
+      font-size: 30px;
+      font-family: "Ubuntu", sans-serif;
+      margin-top: -50px;
+    }
+
+    a {
+      font-size: 30px;
+      font-family: "Alegreya Sans SC", sans-serif;
+      border-radius: 5px;
+      padding: 5px 30px;
+
+      &:first-of-type {
+        margin-right: 20px;
+        position: relative;
+
+        &:first-of-type:after {
+          content: "";
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 100%;
+          left: 50%;
+          width: 0;
+          height: 3px;
+          background: linear-gradient(264.92deg, #fd8b49 -11.22%, #de2473 51.24%, #4b3695 109.91%);
+          transition: all 0.5s;
+        }
+
+        &:first-of-type:hover:after {
+          width: 100%;
+        }
+      }
+
+      &:last-of-type {
+        color: white;
+        background: linear-gradient(264.92deg, #fd8b49 -11.22%, #de2473 51.24%, #4b3695 109.91%);
+      }
+    }
+  }
+
+  @media (max-width: 1370px) {
+    &:before {
+      mask-position: 300px 0;
+      mask-repeat: no-repeat;
+    }
+
+    .presentation {
+      width: 480px;
+      margin-left: 20px;
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
+  @media (max-width: 870px) {
+    justify-content: center;
+    &:before {
+      width: 100%;
+      background-size: cover;
+      background-position: 0;
+      mask-image: url("../../Assets/Img/elipse-homepage-mask.png");
+      mask-position: top center;
+    }
+
+    .presentation {
+      h1,
+      p,
+      a:first-of-type {
+        color: $white;
+      }
+
+      h1 {
+        border-left-color: $white;
+      }
+    }
+  }
+
+  @media (max-width: 580px) {
+    &:before {
+    }
+
+    .presentation {
+      width: 90%;
+      margin-left: 0;
+
+      h1 {
+        font-size: 32px;
+      }
+      p,
+      a {
+        font-size: 22px;
+      }
+
+      a {
+        &:first-of-type {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,364 @@
+// These are the segment elements which the API data will take place, each of them consists
+// of a header container, which is has the information of which segment it is, and a
+// data container, which is the container where the API data itself will take place
+#nasa,
+#rover,
+#APOD {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 700px;
+
+  * {
+    color: $black;
+
+    h1 {
+      font-family: "Ubuntu", sans-serif;
+    }
+  }
+
+  > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 650px;
+    height: 600px;
+    background-color: $white;
+    border-radius: 0 50px 50px 0;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .icon-placeholder {
+    font-size: 90px;
+  }
+}
+
+// Both the nasa and rover segments have the same list of API data structure with some minor differences
+#nasa,
+#rover {
+  // Container that wraps the API data
+  .data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 950px;
+    height: 370px;
+    position: relative;
+    background-color: $white;
+    border-radius: 20px 0 0 20px;
+
+    // Next and Previous buttons
+    .arrow {
+      position: absolute;
+      top: 50%;
+      font-size: 40px;
+      padding: 7px;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+
+      &:first-of-type {
+        display: none;
+        left: 3%;
+      }
+
+      &:last-of-type {
+        left: 97%;
+      }
+
+      &:active {
+        margin-top: 5px;
+      }
+    }
+
+    // API data ul
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 850px;
+      overflow-y: hidden;
+      overflow-x: auto;
+      position: relative;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        min-width: 420px;
+        scroll-snap-align: start;
+        transition: all 0.5s;
+
+        // data img
+
+        > img {
+          height: 250px;
+          object-fit: cover;
+        }
+
+        // Li / Img description
+        div {
+          display: flex;
+          justify-content: space-between;
+          padding: 5px;
+
+          i {
+            width: 25px;
+          }
+
+          p {
+            font-family: "Ubuntu", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+#nasa {
+  background-image: url("../../Assets/Img/library-bg.png");
+
+  header label {
+    margin-top: 50px;
+
+    button {
+      font-size: 30px;
+      border: none;
+      background: none;
+    }
+
+    input {
+      height: 40px;
+      margin-right: 20px;
+      padding: 5px;
+      font-family: "Alegreya Sans SC", sans-serif;
+      font-size: 22px;
+    }
+  }
+
+  .data ul li div {
+    p {
+      width: 60%;
+      text-align: start;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+#rover {
+  background-image: url("../../Assets/Img/rover-bg.png");
+
+  header {
+    // Span containing custom checkboxes
+    span {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+
+      input {
+        display: none;
+      }
+
+      input:checked + label {
+        color: white;
+        background-color: $black;
+      }
+
+      label {
+        cursor: pointer;
+        font-family: "Alegreya Sans SC", sans-serif;
+        font-size: 20px;
+        border: $black solid 2px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+    }
+  }
+
+  // This span contains the camera icon, camera name, calendar icon and date
+  .data ul li div span {
+    display: flex;
+  }
+}
+
+#APOD {
+  background-image: url("../../Assets/Img/APOD-bg.png");
+
+  header {
+    border-radius: 50px 0 0 50px;
+  }
+  .APOD-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    gap: 30px;
+    width: 800px;
+    height: 578px;
+    padding: 30px;
+    border-radius: 0 20px 20px 0;
+
+    img,
+    iframe {
+      width: 100%;
+      min-height: 350px;
+      border: none;
+    }
+
+    > div {
+      text-align: start;
+
+      p {
+        font-family: "Alegreya Sans SC", sans-serif;
+        height: 100px;
+        padding: 10px;
+        margin-top: 10px;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+// Media Query responsible for changing the flex direction of all three containers to column, and
+// other minor adjustments such as image and font size
+@media (max-width: 1650px) {
+  #nasa,
+  #APOD,
+  #rover {
+    flex-direction: column;
+    justify-content: center;
+
+    .data,
+    .APOD-data,
+    header {
+      height: auto;
+      width: 75%;
+      border-radius: 0;
+      padding: 10px;
+    }
+
+    header {
+      gap: 10px;
+      img {
+        width: 150px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+
+    .data {
+      ul {
+        width: 90%;
+        li {
+          min-width: 49.5%;
+          > img {
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #nasa {
+    header {
+      label {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  #rover {
+    header {
+      span {
+        justify-content: center;
+        gap: 50px;
+      }
+    }
+  }
+
+  #APOD {
+    flex-direction: column-reverse;
+    justify-content: center;
+    .APOD-data {
+      height: 450px;
+      img,
+      iframe {
+        width: 500px;
+        min-height: 250px;
+        margin: 0 auto;
+      }
+
+      > div {
+        p {
+          height: 70px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1012px) {
+  #nasa,
+  #APOD,
+  #rover {
+    .data,
+    .APOD-data,
+    header {
+      width: 90%;
+    }
+  }
+  #nasa,
+  #rover {
+    .data {
+      ul {
+        li {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+
+  #APOD {
+    .APOD-data {
+      img,
+      iframe {
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  #rover {
+    header span {
+      gap: 12px;
+      margin-top: 5px;
+      label {
+        font-size: 16px;
+      }
+    }
+
+    .data ul li div span {
+      text-align: start;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,1127 @@
+#homepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 784px;
+  width: 100%;
+  position: relative;
+  color: #14213d;
+  margin-top: -150px;
+  background-image: url("../../Assets/Img/homepage-bg.svg");
+}
+
+#homepage:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1120px;
+  height: 821px;
+  background-image: url("../../Assets/Img/homepage.png");
+  background-repeat: no-repeat;
+  background-position: right -20px;
+  -webkit-mask-image: url("../../Assets/Img/mask.png");
+          mask-image: url("../../Assets/Img/mask.png");
+  -webkit-animation: bgPosition 5s ease-in-out infinite;
+          animation: bgPosition 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes bgPosition {
+  0%,
+  100% {
+    background-position: right -20px;
+  }
+  50% {
+    background-position: right 0px;
+  }
+}
+
+@keyframes bgPosition {
+  0%,
+  100% {
+    background-position: right -20px;
+  }
+  50% {
+    background-position: right 0px;
+  }
+}
+
+#homepage .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 600px;
+  gap: 100px;
+  z-index: 1;
+  margin-left: 75px;
+  text-align: start;
+}
+
+#homepage .presentation h1 {
+  font-size: 55px;
+  font-family: "Baumans", cursive;
+  border-left: 3px solid #14213d;
+  padding-left: 30px;
+}
+
+#homepage .presentation p {
+  font-size: 30px;
+  font-family: "Ubuntu", sans-serif;
+  margin-top: -50px;
+}
+
+#homepage .presentation a {
+  font-size: 30px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  border-radius: 5px;
+  padding: 5px 30px;
+}
+
+#homepage .presentation a:first-of-type {
+  margin-right: 20px;
+  position: relative;
+}
+
+#homepage .presentation a:first-of-type:first-of-type:after {
+  content: "";
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(264.92deg, #fd8b49 -11.22%, #de2473 51.24%, #4b3695 109.91%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#homepage .presentation a:first-of-type:first-of-type:hover:after {
+  width: 100%;
+}
+
+#homepage .presentation a:last-of-type {
+  color: white;
+  background: linear-gradient(264.92deg, #fd8b49 -11.22%, #de2473 51.24%, #4b3695 109.91%);
+}
+
+@media (max-width: 1370px) {
+  #homepage:before {
+    -webkit-mask-position: 300px 0;
+            mask-position: 300px 0;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+  }
+  #homepage .presentation {
+    width: 480px;
+    margin-left: 20px;
+  }
+  #homepage .presentation h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 870px) {
+  #homepage {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #homepage:before {
+    width: 100%;
+    background-size: cover;
+    background-position: 0;
+    -webkit-mask-image: url("../../Assets/Img/elipse-homepage-mask.png");
+            mask-image: url("../../Assets/Img/elipse-homepage-mask.png");
+    -webkit-mask-position: top center;
+            mask-position: top center;
+  }
+  #homepage .presentation h1,
+  #homepage .presentation p,
+  #homepage .presentation a:first-of-type {
+    color: #fdfaff;
+  }
+  #homepage .presentation h1 {
+    border-left-color: #fdfaff;
+  }
+}
+
+@media (max-width: 580px) {
+  #homepage .presentation {
+    width: 90%;
+    margin-left: 0;
+  }
+  #homepage .presentation h1 {
+    font-size: 32px;
+  }
+  #homepage .presentation p,
+  #homepage .presentation a {
+    font-size: 22px;
+  }
+  #homepage .presentation a:first-of-type {
+    margin-right: 5px;
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 10;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav img {
+  margin-left: 40px;
+}
+
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+nav div a {
+  color: white;
+  position: relative;
+}
+
+nav div a:after {
+  content: "";
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  background: linear-gradient(264.92deg, #fd8b49 -11.22%, #de2473 51.24%, #4b3695 109.91%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav div a:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  nav img {
+    margin-left: 0;
+    width: 70px;
+  }
+  nav div {
+    margin-right: 0px;
+    font-size: 18px;
+  }
+}
+
+.darken {
+  background-color: #1d3557;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 600px;
+}
+
+#about .img-wrapper {
+  position: absolute;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  top: 50%;
+  left: 1%;
+  overflow: hidden;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  -webkit-animation: blob 6s linear infinite;
+          animation: blob 6s linear infinite;
+  width: 800px;
+  height: 600px;
+}
+
+#about .img-wrapper img {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  -webkit-animation: imgPosition 5s ease-in-out infinite;
+          animation: imgPosition 5s ease-in-out infinite;
+}
+
+#about > div:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  width: 600px;
+  color: #14213d;
+  margin-right: 120px;
+  text-align: start;
+}
+
+#about > div:last-of-type h1 {
+  font-size: 65px;
+  font-family: "Baumans", cursive;
+  line-height: 100px;
+  text-align: center;
+  margin-bottom: -30px;
+  border-right: 3px solid #14213d;
+  padding-right: 30px;
+}
+
+#about > div:last-of-type p {
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px;
+}
+
+#about > div:last-of-type a {
+  font-size: 30px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  border-radius: 5px;
+  padding: 5px 30px;
+  color: white;
+  background: linear-gradient(264.92deg, #fd8b49 -11.22%, #de2473 51.24%, #4b3695 109.91%);
+}
+
+@-webkit-keyframes blob {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30%/40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50%/30% 30% 70% 80%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 90%/ 100% 100% 70% 70%;
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30%/40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50%/30% 30% 70% 80%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 90%/ 100% 100% 70% 70%;
+  }
+}
+
+@-webkit-keyframes imgPosition {
+  0%,
+  100% {
+    object-position: center;
+  }
+  50% {
+    object-position: 0 15px;
+  }
+}
+
+@keyframes imgPosition {
+  0%,
+  100% {
+    -o-object-position: center;
+       object-position: center;
+  }
+  50% {
+    -o-object-position: 0 15px;
+       object-position: 0 15px;
+  }
+}
+
+@media (max-width: 1600px) {
+  #about {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #about > div:last-of-type {
+    margin-right: 0;
+  }
+  #about .img-wrapper {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 680px) {
+  #about {
+    height: 500px;
+  }
+  #about > div:last-of-type {
+    gap: 20px;
+  }
+  #about > div:last-of-type h1 {
+    font-size: 40px;
+    line-height: initial;
+    margin-bottom: 1px;
+  }
+  #about > div:last-of-type p,
+  #about > div:last-of-type a {
+    font-size: 18px;
+  }
+  #about .img-wrapper {
+    top: 80%;
+    width: 400px;
+    height: 250px;
+  }
+}
+
+#preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 800px;
+}
+
+#preview h1,
+#preview h2 {
+  font-family: "Baumans", cursive;
+  text-align: center;
+  color: #14213d;
+}
+
+#preview h1 {
+  font-size: 75px;
+  margin-bottom: 10px;
+}
+
+#preview h2 {
+  font-size: 40px;
+  margin-bottom: 70px;
+}
+
+#preview .img-anchors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 150px;
+}
+
+#preview .img-anchors a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 300px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#preview .img-anchors a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 27px;
+  font-family: "Ubuntu", sans-serif;
+  color: #14213d;
+}
+
+#preview .img-anchors a p i {
+  margin-left: 20px;
+  color: #14213d;
+  font-size: 23px;
+}
+
+#preview .img-anchors a:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+@media (max-width: 1380px) {
+  #preview .img-anchors {
+    gap: 10px;
+  }
+  #preview .img-anchors a img {
+    width: 220px;
+  }
+  #preview .img-anchors a p,
+  #preview .img-anchors a i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 870px) {
+  #preview {
+    height: auto;
+    padding: 10px;
+  }
+  #preview h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+  }
+  #preview h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  #preview .img-anchors {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  #preview .img-anchors a {
+    width: 220px;
+  }
+  #preview .img-anchors a img {
+    width: 200px;
+  }
+  #preview .img-anchors a p {
+    font-size: 16px;
+  }
+}
+
+footer {
+  background-color: #222f35;
+  height: 150px;
+  margin-top: -50px;
+  display: none;
+}
+
+#nasa,
+#rover,
+#APOD {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 700px;
+}
+
+#nasa *,
+#rover *,
+#APOD * {
+  color: #14213d;
+}
+
+#nasa * h1,
+#rover * h1,
+#APOD * h1 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+#nasa > header,
+#rover > header,
+#APOD > header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 650px;
+  height: 600px;
+  background-color: #fdfaff;
+  border-radius: 0 50px 50px 0;
+}
+
+#nasa > header h1,
+#rover > header h1,
+#APOD > header h1 {
+  font-size: 40px;
+}
+
+#nasa .icon-placeholder,
+#rover .icon-placeholder,
+#APOD .icon-placeholder {
+  font-size: 90px;
+}
+
+#nasa .data,
+#rover .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 950px;
+  height: 370px;
+  position: relative;
+  background-color: #fdfaff;
+  border-radius: 20px 0 0 20px;
+}
+
+#nasa .data .arrow,
+#rover .data .arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  padding: 7px;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#nasa .data .arrow:first-of-type,
+#rover .data .arrow:first-of-type {
+  display: none;
+  left: 3%;
+}
+
+#nasa .data .arrow:last-of-type,
+#rover .data .arrow:last-of-type {
+  left: 97%;
+}
+
+#nasa .data .arrow:active,
+#rover .data .arrow:active {
+  margin-top: 5px;
+}
+
+#nasa .data ul,
+#rover .data ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  width: 850px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: relative;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+#nasa .data ul::-webkit-scrollbar,
+#rover .data ul::-webkit-scrollbar {
+  display: none;
+}
+
+#nasa .data ul li,
+#rover .data ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 420px;
+  scroll-snap-align: start;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#nasa .data ul li > img,
+#rover .data ul li > img {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#nasa .data ul li div,
+#rover .data ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+}
+
+#nasa .data ul li div i,
+#rover .data ul li div i {
+  width: 25px;
+}
+
+#nasa .data ul li div p,
+#rover .data ul li div p {
+  font-family: "Ubuntu", sans-serif;
+}
+
+#nasa {
+  background-image: url("../../Assets/Img/library-bg.png");
+}
+
+#nasa header label {
+  margin-top: 50px;
+}
+
+#nasa header label button {
+  font-size: 30px;
+  border: none;
+  background: none;
+}
+
+#nasa header label input {
+  height: 40px;
+  margin-right: 20px;
+  padding: 5px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 22px;
+}
+
+#nasa .data ul li div p {
+  width: 60%;
+  text-align: start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#rover {
+  background-image: url("../../Assets/Img/rover-bg.png");
+}
+
+#rover header span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+#rover header span input {
+  display: none;
+}
+
+#rover header span input:checked + label {
+  color: white;
+  background-color: #14213d;
+}
+
+#rover header span label {
+  cursor: pointer;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 20px;
+  border: #14213d solid 2px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#rover .data ul li div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#APOD {
+  background-image: url("../../Assets/Img/APOD-bg.png");
+}
+
+#APOD header {
+  border-radius: 50px 0 0 50px;
+}
+
+#APOD .APOD-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fdfaff;
+  gap: 30px;
+  width: 800px;
+  height: 578px;
+  padding: 30px;
+  border-radius: 0 20px 20px 0;
+}
+
+#APOD .APOD-data img,
+#APOD .APOD-data iframe {
+  width: 100%;
+  min-height: 350px;
+  border: none;
+}
+
+#APOD .APOD-data > div {
+  text-align: start;
+}
+
+#APOD .APOD-data > div p {
+  font-family: "Alegreya Sans SC", sans-serif;
+  height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+@media (max-width: 1650px) {
+  #nasa,
+  #APOD,
+  #rover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #nasa .data,
+  #nasa .APOD-data,
+  #nasa header,
+  #APOD .data,
+  #APOD .APOD-data,
+  #APOD header,
+  #rover .data,
+  #rover .APOD-data,
+  #rover header {
+    height: auto;
+    width: 75%;
+    border-radius: 0;
+    padding: 10px;
+  }
+  #nasa header,
+  #APOD header,
+  #rover header {
+    gap: 10px;
+  }
+  #nasa header img,
+  #APOD header img,
+  #rover header img {
+    width: 150px;
+  }
+  #nasa header h1,
+  #APOD header h1,
+  #rover header h1 {
+    font-size: 25px;
+  }
+  #nasa .data ul,
+  #APOD .data ul,
+  #rover .data ul {
+    width: 90%;
+  }
+  #nasa .data ul li,
+  #APOD .data ul li,
+  #rover .data ul li {
+    min-width: 49.5%;
+  }
+  #nasa .data ul li > img,
+  #APOD .data ul li > img,
+  #rover .data ul li > img {
+    min-width: 100%;
+  }
+  #nasa header label {
+    margin-top: 10px;
+  }
+  #rover header span {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 50px;
+  }
+  #APOD {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #APOD .APOD-data {
+    height: 450px;
+  }
+  #APOD .APOD-data img,
+  #APOD .APOD-data iframe {
+    width: 500px;
+    min-height: 250px;
+    margin: 0 auto;
+  }
+  #APOD .APOD-data > div p {
+    height: 70px;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1012px) {
+  #nasa .data,
+  #nasa .APOD-data,
+  #nasa header,
+  #APOD .data,
+  #APOD .APOD-data,
+  #APOD header,
+  #rover .data,
+  #rover .APOD-data,
+  #rover header {
+    width: 90%;
+  }
+  #nasa .data ul li,
+  #rover .data ul li {
+    min-width: 100%;
+  }
+  #APOD .APOD-data img,
+  #APOD .APOD-data iframe {
+    width: 100%;
+    min-height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 490px) {
+  #rover header span {
+    gap: 12px;
+    margin-top: 5px;
+  }
+  #rover header span label {
+    font-size: 16px;
+  }
+  #rover .data ul li div span {
+    text-align: start;
+    font-size: 14px;
+  }
+}
+
+[data-aos] {
+  opacity: 0;
+}
+
+.slide-up {
+  -webkit-animation: slide-up 1s ease-in-out both;
+          animation: slide-up 1s ease-in-out both;
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.slide-left {
+  -webkit-animation: slide-left 1s ease-in-out both;
+          animation: slide-left 1s ease-in-out both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  -webkit-animation: slide-right 1s ease-in-out both;
+          animation: slide-right 1s ease-in-out both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+button,
+i,
+a {
+  cursor: pointer;
+}
+
+button,
+a {
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+a {
+  font-style: none;
+  color: initial;
+}
+
+body {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #fdfaff;
+  text-align: center;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 140px;
+  gap: 120px;
+}
